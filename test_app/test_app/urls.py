@@ -28,5 +28,10 @@ urlpatterns = [
 
     path('',    include('cms.urls')),
 
+    path('accounts/',include('django.contrib.auth.urls')),
+
+    path ('accounts/signup/', include('cms.urls'), name='signup'),
+
     path('admin/', admin.site.urls),
+    
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
