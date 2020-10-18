@@ -4,9 +4,12 @@ from django.db import models
 
 class registration(models.Model):
     full_name = models.CharField(max_length=50,help_text="Enter Your Full Name")
-    cnic = models.CharField(max_length=15,help_text="Enter Your Correct CNIC")
-    email = models.CharField(max_length=20, help_text='Enter Your Email')
-    password = models.CharField(max_length=100, help_text='Enter Your Password')
+    semester = models.CharField(max_length=1)
     
+
+class department(models.Model):
+    dep = models.ForeignKey(registration, blank=True, null=True, on_delete=models.CASCADE)
+
     def __str__(self):
         return self.full_name
+
