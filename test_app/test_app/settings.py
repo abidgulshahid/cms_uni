@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'students',
     'teachers',
     'cms',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'test_app.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        "DIRS": ["cms/templates/"],
+        "DIRS": ["accounts/templates/"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
